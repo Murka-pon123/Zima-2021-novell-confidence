@@ -1,210 +1,260 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности | Kiv4ik Studio</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #34495e;
-            --text-color: #333;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            border-bottom: 5px solid var(--secondary-color);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .content {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 30px;
-            margin-top: 30px;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            margin: 25px 0 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--light-color);
-        }
-        
-        h2:first-child {
-            margin-top: 0;
-        }
-        
-        .policy-section {
-            margin-bottom: 30px;
-        }
-        
-        .policy-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .policy-item:before {
-            content: "•";
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .links {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: var(--border-radius);
-            transition: background-color 0.3s;
-        }
-        
-        .link-button:hover {
-            background-color: var(--dark-color);
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: var(--dark-color);
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .links {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiv4ik Studio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body {
+      background: linear-gradient(120deg, #0e0e14, #1b1140);
+      color: #ffffff;
+      backdrop-filter: blur(10px);
+    }/* Заставка */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #2a1b5e, #0e0e14);
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* Разделы */
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #a78bfa;
+}
+
+section p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 26px;
+  margin-top: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0b0b11;
+  opacity: 0.7;
+}
+
+/* Навигация в стиле Apple */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 25, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #a78bfa;
+}
+
+.nav-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Kiv4ik Studio</h1>
-            <p>Политика конфиденциальности и распространения</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="content">
-            <section class="policy-section">
-                <h2>Конфиденциальность</h2>
-                
-                <div class="policy-item">
-                    Вся игра — вымышленный продукт. Любые совпадения с реальными лицами, событиями или брендами случайны.
-                </div>
-                
-                <div class="policy-item">
-                    3D-модели частично созданы нами, частично получены из открытых источников: Sketchfab, Unity Asset Store и других авторских ресурсов с соблюдением лицензий.
-                </div>
-                
-                <div class="policy-item">
-                    Игра не запрашивает доступ к камере, микрофону, галерее или любым другим личным данным.
-                </div>
-                
-                <div class="policy-item">
-                    Игры разработаны на движке Unity, Solar 2d. Подробнее: 
-                    <a href="https://unity.com/legal" target="_blank">https://unity.com/legal</a>, 
-                    <a href="https://solar2d.com/" target="_blank">https://solar2d.com/</a>
-                </div>
-                
-                <div class="policy-item">
-                    Все бренды, упомянутые или визуально использованные в игре, принадлежат их правообладателям и используются в рамках их публичных политик и разрешений.
-                </div>
-                
-                <div class="policy-item">
-                    Мы не одобряем копирование, плагиат, несанкционированное использование контента, персонажей, стиля или названий, связанных с игрой или Kiv4ik Studio.
-                </div>
-                
-                <div class="policy-item">
-                    У нас есть официальные соцсети — ссылки указаны в описании игры.
-                </div>
-                
-                <div class="policy-item">
-                    Игра не требует постоянного подключения к интернету и не является онлайн-мультиплеером.
-                </div>
-            </section>
-            
-            <section class="policy-section">
-                <h2>Политика распространения</h2>
-                
-                <div class="policy-item">
-                    Игра доступна во всех странах без географических ограничений.
-                </div>
-                
-                <div class="policy-item">
-                    Мы оставляем за собой право обновлять, дополнять или ограничивать доступ к отдельным версиям без предварительного уведомления.
-                </div>
-            </section>
-            
-            <div class="links">
-                <a href="#" class="link-button">Вернуться на главную</a>
-                <a href="http://t.me/Murka_pon123" class="link-button">Связаться с нами</a>
-            </div>
-        </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">Kiv4ik Studio</div>
+      <div class="nav-links">
+        <a href="#games">Игры</a>
+        <a href="#about">Разработчики</a>
+        <a href="#socials">Соцсети</a>
+        <a href="#support">Поддержать</a>
+        <a href="#contact">Контакты</a>
+      </div>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Kiv4ik Studio. Все права защищены.</p>
-        </div>
-    </footer>
-</body>
-  </html>
+  </nav>  <!-- Главная заставка -->  <div class="hero">
+    <div class="logo">Kiv4ik Studio</div>
+    <div class="subtitle">Разработка игр и цифровых проектов</div>
+    <div style="margin-top:30px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+      <a href="#games" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">Игры</a>
+      <a href="#privacy" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">Конфиденциальность</a>
+      <a href="#about" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">О нас</a>
+      <a href="#socials" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">Соцсети</a>
+      <a href="#support" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">Поддержка</a>
+      <a href="#contact" style="padding:10px 16px; background:#161622; border-radius:20px; color:#a78bfa; text-decoration:none; font-size:0.9rem;">Контакты</a>
+    </div>
+    <div class="scroll-hint">Прокрутите вниз</div>
+  </div>  <!-- Наши игры -->  <section id="games">
+    <h2>Наши игры</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+      <div class="card">
+        <h3>Winter 2021 Novell</h3>
+        <p>Атмосферная визуальная новелла с зимним настроением.</p>
+        <a href="https://www.rustore.ru/catalog/app/com.zima.app2021" target="_blank" style="color:#a78bfa; text-decoration:none;">Открыть в RuStore →</a>
+      </div>
+      <div class="card">
+        <h3>Winter 2021 3D</h3>
+        <p>Экспериментальный 3D‑проект во вселенной Winter 2021.</p>
+        <span style="opacity:0.6;">RuStore — скоро</span>
+      </div>
+      <div class="card">
+        <h3>Dark Rooms</h3>
+        <p>Психологическая игра с мрачной атмосферой и загадками.</p>
+        <span style="opacity:0.6;">RuStore — скоро</span>
+      </div>
+      <div class="card">
+        <h3>Winter 2021 Novell 2</h3>
+        <p>Продолжение истории с новыми персонажами и событиями.</p>
+        <span style="opacity:0.6;">RuStore — скоро</span>
+      </div>
+    </div>
+  </section>  <!-- Конфиденциальность -->  <section id="privacy">
+    <h2>Конфиденциальность</h2>
+    <div class="card">
+      <p><strong>Вся игра — вымышленный продукт.</strong> Любые совпадения с реальными лицами, событиями или брендами случайны.</p>
+      <p>3D-модели частично созданы нами, частично получены из открытых источников: Sketchfab, Unity Asset Store и других авторских ресурсов с соблюдением лицензий.</p>
+      <p>Игра не запрашивает доступ к камере, микрофону, галерее или любым другим личным данным.</p>
+      <p>Игры разработаны на движках <strong>Unity</strong> и <strong>Solar2D</strong>. Подробнее: unity.com/legal, solar2d.com</p>
+      <p>Все бренды, упомянутые или визуально использованные в игре, принадлежат их правообладателям и используются в рамках их публичных политик и разрешений.</p>
+      <p>Мы не одобряем копирование, плагиат, несанкционированное использование контента, персонажей, стиля или названий, связанных с игрой или Kiv4ik Studio.</p>
+      <p>У нас есть официальные соцсети — ссылки указаны в описании игры.</p>
+      <p>Игра не требует постоянного подключения к интернету и не является онлайн-мультиплеером.</p>
+      <hr style="margin:20px 0; opacity:0.2;">
+      <p><strong>Политика распространения</strong></p>
+      <p>Игра доступна во всех странах без географических ограничений.</p>
+      <p>Мы оставляем за собой право обновлять, дополнять или ограничивать доступ к отдельным версиям без предварительного уведомления.</p>
+    </div>
+  </section>  <!-- О разработчиках -->  <section id="about">
+    <h2>О разработчиках</h2>
+    <div class="card">
+      <p><strong>Kiv4ik Studio</strong> — независимая студия разработки игр, ориентированная на качество, оригинальность и атмосферу проектов.</p>
+    </div><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; margin-top:30px;">
+  <div class="card">
+    <h3>MURKA PON</h3>
+    <p><strong>Основатель студии</strong></p>
+    <p>Разработчик и художник. Идейный вдохновитель и главный автор проектов Kiv4ik Studio.</p>
+  </div>
+  <div class="card">
+    <h3>FFSON DEV</h3>
+    <p><strong>Разработчик / Менеджер</strong></p>
+    <p>Главный помощник MURKA PON, отвечает за разработку, организацию и управление проектами.</p>
+  </div>
+  <div class="card">
+    <h3>MIWWWIN</h3>
+    <p><strong>Художник / Концепт-артист</strong></p>
+    <p>Создаёт спрайты, арты, обложки и концепт-дизайн для игр студии.</p>
+  </div>
+  <div class="card">
+    <h3>SAVOK</h3>
+    <p><strong>Разработчик</strong></p>
+    <p>Помощник MURKA PON, участвует в технической реализации и поддержке проектов.</p>
+  </div>
+</div>
+
+  </section>  <!-- Соц сети -->  <section id="socials">
+    <h2>Наши соцсети</h2>
+    <div class="card">
+      <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center;">
+        <a href="https://t.me/kiv4ik_studio" target="_blank" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#ffffff; padding:12px 16px; border-radius:18px; background:rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+          <span style="font-size:1.4rem;">📨</span>
+          <span>Telegram</span>
+        </a>
+        <a href="https://www.tiktok.com/@kiv4ik.studio?_r=1&_t=ZS-92OFTlFu1GT" target="_blank" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#ffffff; padding:12px 16px; border-radius:18px; background:rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+          <span style="font-size:1.4rem;">🎵</span>
+          <span>TikTok</span>
+        </a>
+        <a href="https://boosty.to/kiv4ikstudio" target="_blank" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#ffffff; padding:12px 16px; border-radius:18px; background:rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+          <span style="font-size:1.4rem;">🚀</span>
+          <span>Boosty</span>
+        </a>
+        <a href="mailto:kiv4ikstudio@gmail.com" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#ffffff; padding:12px 16px; border-radius:18px; background:rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+          <span style="font-size:1.4rem;">✉️</span>
+          <span>kiv4ikstudio@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>  <!-- Поддержка и донаты -->  <section id="support">
+    <h2>Поддержка и донаты</h2>
+    <div class="card" style="text-align:center;">
+      <p style="margin-bottom:20px;">Вы можете поддержать развитие Kiv4ik Studio. Это напрямую помогает созданию новых игр и обновлений.</p>
+      <a href="https://boosty.to/kiv4ikstudio" target="_blank" style="display:block; width:100%; max-width:420px; margin:0 auto; padding:16px 24px; border-radius:26px; background:linear-gradient(135deg, #7c3aed, #a78bfa); color:#ffffff; font-size:1.1rem; font-weight:bold; text-decoration:none; box-shadow:0 10px 30px rgba(124,58,237,0.4);">
+        💜 Поддержать в BOOSTY
+      </a>
+    </div>
+  </section>  <!-- Связаться -->  <section id="contact">
+    <h2>Связаться с нами / Сотрудничество</h2>
+    <div class="card">
+      <p>Email: kiv4ikstudio@gmail.com</p>
+      <a href="https://t.me/V3st1kk" target="_blank" style="color:#a78bfa; text-decoration:none;">написать в telegram</a>
+      <p>Мы открыты к предложениям и сотрудничеству.</p>
+    </div>
+  </section>  <footer>
+    © 2025 Kiv4ik Studio. Все права защищены.
+  </footer></body>
+    </html>
